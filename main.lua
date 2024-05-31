@@ -1,28 +1,3 @@
--- Fetch ASCII art from the server
-local function fetchAsciiArt(text, font)
-    local url = "http://localhost:3000/ascii?text=" .. encodeURIComponent(text) .. "&font=" .. encodeURIComponent(font)
-    local response = fetch({
-      url = url,
-      method = "GET"
-    })
-  
-    if response.status == 200 then
-      local asciiArt = response.body
-      displayAsciiArt(asciiArt)
-    else
-      print("Error fetching ASCII art: " .. response.status)
-    end
-  end
-  
-  -- Display ASCII art on the page
-  local function displayAsciiArt(asciiArt)
-    local asciiElement = get("ascii-art")
-    if asciiElement then
-      asciiElement.set_content("<pre>" .. asciiArt .. "</pre>")
-    else
-      print("Element #ascii-art not found")
-    end
-  end
-  
-  -- Example usage
-  fetchAsciiArt("Hello, Bussin!", "standard")
+local link = get("ascii-art")
+
+link.set_content("Click me to get redirected")
