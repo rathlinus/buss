@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ASCII Art</title>
-    <style>
-      pre {
-        font-family: monospace;
-        white-space: pre-wrap;
-      }
-    </style>
+    <title>Bussin Web X AI Chatbot</title>
+    <link
+      rel="icon"
+      href="https://cdn.pixabay.com/photo/2021/10/17/14/47/windows-7-logo-6718525_1280.png"
+    />
+    <meta
+      name="description"
+      content="A simple AI chatbot implemented on Bussin Web X"
+    />
+    <link href="styles.css" />
+    <script src="chatbot.lua"></script>
   </head>
   <body>
-    <h1>Art</h1>
-    <p class="ok">This is a paragraph.</p>
-    <script src="main.lua"></script>
+    <header>
+      <h1>Bussin Web X - AI Chatbot</h1>
+    </header>
+    <main>
+      <div id="chat-container">
+        <div id="chat-output"></div>
+        <input id="user-input" placeholder="Type your message..." />
+        <button id="send-btn">Send</button>
+      </div>
+    </main>
+    <footer>
+      <p>Powered by Bussin Web X</p>
+    </footer>
   </body>
 </html>
