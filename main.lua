@@ -16,7 +16,7 @@ local function fetchAsciiArt(text, font)
   
   -- Display ASCII art on the page
   local function displayAsciiArt(asciiArt)
-    local asciiElement = get("#ascii-art")
+    local asciiElement = get("ascii-art")
     if asciiElement then
       asciiElement.set_content("<pre>" .. asciiArt .. "</pre>")
     else
